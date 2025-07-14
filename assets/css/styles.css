@@ -280,9 +280,7 @@ main h2 {
 }
 
 /* AOS animation styling for .stat-box */
-.stat-box[data-aos] {
-  /* You can add styles specific to stat-boxes with data-aos attribute here */
-}
+
 
 /* This applies animation to all stat-boxes */
 .stat-box {
