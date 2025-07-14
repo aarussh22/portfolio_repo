@@ -26,7 +26,7 @@ body {
 
 /* Header & Nav */
 .site-header {
-  background: url('/assets/images/html_bg.jpg') no-repeat center center fixed;
+  background: url('./assets/images/html_bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: rgb(0, 0, 0);
 }
@@ -199,7 +199,7 @@ main h2 {
 
 /* Header with background image fade */
 .site-header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent), url('/assets/images/html_bg.jpg') no-repeat center top/cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent), url('./assets/images/html_bg.jpg') no-repeat center top/cover;
   height: 100px;
   display: flex;
   align-items: center;
