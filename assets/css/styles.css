@@ -1,0 +1,722 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: url('/assets/images/beww.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* Header & Nav */
+.site-header {
+  background: url('/assets/images/html_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav li+li {
+  margin-left: 2rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+
+.hero-content h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.2rem; /* Larger, bold heading */
+  font-weight: 400;  /* Bebas Neue is bold by design */
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hero p{
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+
+;
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: center;
+  animation: popIn 0.8s ease-out 0.3s forwards;
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center; /* Optional for alignment */
+}
+
+/* Keyframes */
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+
+
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: black;
+  color: #00FFFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background: #00FFFF;
+  color: black;
+}
+
+/* Main Content */
+main h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2C7A1E;
+}
+
+.projects .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 1rem;
+  flex: 1;
+  min-width: calc(33% - 1rem);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+/* Footer */
+.site-footer {
+  background: #333;
+  color: #eee;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .projects .cards {
+    flex-direction: column;
+  }
+}
+
+
+/* Header with background image fade */
+.site-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent), url('/assets/images/html_bg.jpg') no-repeat center top/cover;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 8;
+  position: relative;
+}
+
+
+/* Hero full height */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  z-index: 5;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.hero-content h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Statistics Section */
+
+
+.statistics {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 2rem 1rem;
+}
+
+.rating-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+
+.statistics h1 {
+  color: whitesmoke;
+}
+
+.rating-stat-box h2 {
+  color: #ffffff ;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  /* allows stacking on small screens */
+}
+
+.stat-box {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* AOS animation styling for .stat-box */
+.stat-box[data-aos] {
+  /* You can add styles specific to stat-boxes with data-aos attribute here */
+}
+
+/* This applies animation to all stat-boxes */
+.stat-box {
+  animation: fadeFloat 1s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  animation-iteration-count: infinite;
+  animation-duration: 5s; /* One cycle every 15 seconds */
+}
+
+/* Keyframes for subtle float and fade */
+@keyframes fadeFloat {
+  0%   { transform: translateY(0); opacity: 1; }
+  8%   { transform: translateY(-10px); opacity: 0.85; }
+  16%   { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* When AOS applies the animation */
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: slight hover effect */
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.stat-box h3 {
+  color: #000000;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+
+  }
+
+.stat-box p {
+  font-size: 1rem;
+  color: #5e0000;
+}
+
+
+
+
+/* Container */
+.chess-coaching {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.coaching-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Image Box */
+.coaching-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 600px;
+  display: block;
+}
+
+/* Text Box */
+.coaching-text {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 50px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coaching-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.coaching-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* Button */
+.trial-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #000000 ;
+  color: #00FFFF ;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.trial-btn:hover {
+  background-color: #00FFFF ;
+  color: #000000;
+}
+
+
+/* Flexbox */
+.chess-coaching {
+  background: url('/assets/images/html_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.coaching-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.coaching-media {
+  position: relative;
+  z-index: 1;
+  /* Keep the image behind */
+}
+
+.coaching-media img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
+}
+
+.coaching-text {
+  position: relative;
+  z-index: 2;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 50px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Overlap adjustments */
+  margin-left: -80px;
+  /* Pull it over the image */
+  margin-top: 100px;
+  /* Push it down for vertical offset */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* Optional: add depth */
+}
+
+
+/* Flowchart */
+.statistics-flow {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.flow-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.flow-title h1 {
+  font-size: 32px;
+  background: #1e1e1e;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Line coming down from title */
+.connector-line {
+  width: 4px;
+  height: 40px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.stat-children {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+}
+
+/* Horizontal line connecting stat boxes */
+.stat-children::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #ccc;
+  margin-top: -20px;
+  width: 100%;
+}
+
+/* Each child box */
+.stat-box {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.stat-box h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Optional: vertical lines connecting horizontal line to each box */
+.stat-box::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 4px;
+  background-color: #ccc;
+}
+
+
+/* Book Trial */
+
+.book-trial {
+  padding: 60px 20px;
+  background: url('/assets/images/html_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.trial-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trial-image {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.trial-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Form box that overlaps and sits lower */
+.trial-form {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 100px;         /* Push it down */
+  margin-right: -120px;        /* Pull over image */
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.trial-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: #000000;
+  color: #00FFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color:#00FFFF(0, 0, 0, 0.659);
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trial-container {
+    flex-direction: column;
+  }
+
+  .trial-form {
+    margin-top: -30px;
+    margin-left: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+
+/* Ratings Container */
+
+.rating-stats-section {
+  padding: 80px 20px;
+  color: white;
+}
+
+.rating-stats-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.rating-stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.rating-stat-box {
+  background-color: rgba(56, 56, 56, 0.8);
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 200px;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rating-stat-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rating-stat-box h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+  color: #00FFFF  ;
+}
+
+/* Hover effect */
+.rating-stat-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rating-stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
